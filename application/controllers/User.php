@@ -1,9 +1,15 @@
 <?php
 
 class User extends CI_Controller {
+	
+
 	function __construct(){
 		parent::__construct();
 		$this->load->model("user_m");
+
+		$data['tbuser'] = $this->user_m->gets();
+
+		$this->load->view('user_data', $data);
 	}
 
 	function form()
@@ -23,5 +29,17 @@ class User extends CI_Controller {
 		var_dump($data);
 		$this->user_m->add($data);
 	}
+
+	function index(){		
+		$data['tbuser'] = $this->user_m->gets();   
+		$this->load->view('user_data', $data);
+	}
+	function del($id){
+		$this->user_m->del($id);  
+		redirect('user');
+	}
+
+	function edit($id){}
+	function detail($id){}
 	
 }
