@@ -42,7 +42,8 @@ class User extends CI_Controller {
 			"fullname" => $this->input->post("fullname"),
 			"level" => $this->input->post("level")
 			);
-		$this->user_m->edit($data, $id);
+		$this->user_m->edit($id, $data);
+		redirect('user');
 	}
 	
 	public function del($id){
