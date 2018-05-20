@@ -2,19 +2,46 @@
 <html>
 <head>
 	<title>Data User</title>
+	<style>
+	.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#user {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+#user td, #user th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#user tr:nth-child(even){background-color: #f2f2f2;}
+
+#user tr:hover {background-color: #ddd;}
+
+#user th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f4511e;
+    color: white;
+}
+</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<table border=1>
+<table id="user" border=1>
 	<tr>
-		<th>No</th>
+		<th>No.</th>
 		<th>Username</th>
 		<th>Password</th>
 		<th>Level</th>
 		<th>Aksi</th>
 	</tr>
 	
-<a href="http://localhost/ci/index.php/user/form">Input Data</a><br/>
+<a href="http://localhost/ci/index.php/user/form"><p class="sansserif">Input Data</p></a><br/>
 	<?php 
 	
 	$nomor = 1;
